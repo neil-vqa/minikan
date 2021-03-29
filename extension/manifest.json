@@ -1,0 +1,26 @@
+{
+  "name": "Minikan",
+  "description": "Minimal Kanban-like task manager.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "permissions": ["tabs", "http://*/", "https://*/"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "commands": {
+    "open-minikan": {
+      "suggested_key": {
+        "default": "Alt+Q",
+        "mac": "Command+Q"
+      },
+      "description": "Opens Minikan modal."
+    }
+  },
+  "web_accessible_resources": ["src/index.html"]
+}
