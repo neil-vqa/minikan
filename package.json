@@ -1,0 +1,26 @@
+{
+  "name": "minikan",
+  "version": "1.0.0",
+  "description": "Minimal Kanban-like task manager.",
+  "main": "app.js",
+  "scripts": {
+    "build:css-dev": "npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./src/tailwind.css",
+    "buid:css-prod": "NODE_ENV=production npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./extension/dist/tailwind.css",
+    "build:prod": "npm run buid:css-prod && copyfiles -f src/*.html src/*.js extension/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neil-vqa/minikan.git"
+  },
+  "keywords": [
+    "kanban",
+    "chrome",
+    "extension"
+  ],
+  "author": "Neil Van Alino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neil-vqa/minikan/issues"
+  },
+  "homepage": "https://github.com/neil-vqa/minikan#readme"
+}

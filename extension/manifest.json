@@ -22,5 +22,6 @@
       "description": "Opens Minikan modal."
     }
   },
-  "web_accessible_resources": ["src/index.html"]
+  "web_accessible_resources": ["dist/index.html"],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
