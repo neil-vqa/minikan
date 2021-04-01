@@ -1,0 +1,4 @@
+extension/dist/
+extension/dist/app.js
+extension/dist/index.html
+extension/dist/tailwind.css

@@ -1,5 +1,6 @@
 chrome.runtime.onMessage.addListener(request => {
   if(request.type == 'open-modal'){
+    iframe.src = chrome.extension.getURL("dist/index.html");
     dialog.showModal();
   }
 });
@@ -43,5 +44,6 @@ iframe.frameBorder = 0;
 
 const dialog = document.querySelector("dialog");
 dialog.querySelector("#closeBtn").addEventListener("click", () => {
+  iframe.src = null;
   dialog.close();
 });
