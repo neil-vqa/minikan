@@ -11,7 +11,7 @@ var BoardContainer = {
         </div>
         <draggable class="flex flex-col space-y-2 px-2" :list="list1" group="people" @change="setItems">
           <div
-            class="bg-white shadow-lg p-2"
+            class="bg-white shadow-lg p-2 cursor-move"
             v-for="(element, index) in list1"
             :key="element.id"
           >
@@ -39,7 +39,7 @@ var BoardContainer = {
         </div>
         <draggable class="flex flex-col space-y-2 px-2" :list="list2" group="people" @change="setItems">
           <div
-            class="bg-white shadow-lg p-2"
+            class="bg-white shadow-lg p-2 cursor-move"
             v-for="(element, index) in list2"
             :key="element.id"
           >
@@ -67,7 +67,7 @@ var BoardContainer = {
         </div>
         <draggable class="flex flex-col space-y-2 px-2" :list="list3" group="people" @change="setItems">
           <div
-            class="bg-white shadow-lg p-2"
+            class="bg-white shadow-lg p-2 cursor-move"
             v-for="(element, index) in list3"
             :key="element.id"
           >
@@ -95,7 +95,7 @@ var BoardContainer = {
         </div>
         <draggable class="flex flex-col space-y-2 px-2" :list="list4" group="people" @change="setItems">
           <div
-            class="bg-white shadow-lg p-2"
+            class="bg-white shadow-lg p-2 cursor-move"
             v-for="(element, index) in list4"
             :key="element.id"
           >
@@ -127,7 +127,7 @@ var BoardContainer = {
         <form @submit.prevent="add" class="space-y-4">
           <div class="flex flex-col">
             <label class="text-xs mb-2">Note/Task</label>
-            <input type="text" v-model="text" class="bg-gray-100 px-3 py-1" required>
+            <textarea v-model="text" class="bg-gray-100 px-3 py-1" rows="4" required></textarea>
           </div>
           <div class="flex flex-col">
             <label class="text-xs mb-2">List</label>
@@ -141,7 +141,7 @@ var BoardContainer = {
           </div>
           <div class="flex justify-end">
             <button type="submit"
-              class="bg-blue-400 px-3 py-2 uppercase text-xs text-white rounded hover:bg-blue-300">
+              class="bg-blue-300 px-3 py-2 uppercase text-xs text-white rounded hover:bg-blue-400">
               add
             </button>
           </div>
