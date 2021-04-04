@@ -43,7 +43,9 @@ iframe.src = chrome.extension.getURL("dist/index.html");
 iframe.frameBorder = 0;
 
 const dialog = document.querySelector("dialog");
-dialog.querySelector("#closeBtn").addEventListener("click", () => {
-  iframe.src = null;
-  dialog.close();
-});
+if (dialog) {
+  dialog.querySelector("#closeBtn").addEventListener("click", () => {
+    iframe.src = null;
+    dialog.close();
+  });
+}
