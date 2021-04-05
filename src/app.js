@@ -1,7 +1,7 @@
 var BoardContainer = {
   template:  /*html*/`
     <div class="h-full p-2 grid grid-cols-4 gap-5">
-      <div class="bg-blue-100 p-2">
+      <div class="bg-blue-100 p-2 h-full">
         <div class="flex justify-between text-gray-600 mb-3">
           <h3 class="font-bold">Todo</h3>
           <span @click="openAddModal('todo')"
@@ -9,24 +9,27 @@ var BoardContainer = {
             + Add
           </span>
         </div>
-        <draggable class="flex flex-col space-y-2 px-2" :list="list1" group="people" @change="setItems">
-          <div
-            class="bg-white shadow-lg p-2 cursor-move"
-            v-for="(element, index) in list1"
-            :key="element.id"
-          >
-            <span>{{ element.text }}</span>
-            <span class="cursor-pointer float-right" @click="removeAt(index, 1)">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <line x1="4" y1="7" x2="20" y2="7" />
-                <line x1="10" y1="11" x2="10" y2="17" />
-                <line x1="14" y1="11" x2="14" y2="17" />
-                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-              </svg>
-            </span>
-          </div>
+        <draggable class="flex flex-col px-2 list-group" :list="list1" group="tasks" animation="200"
+          @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
+          <transition-group :name="playTransition">
+            <div
+              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              v-for="(element, index) in list1"
+              :key="element.id"
+            >
+              <span>{{ element.text }}</span>
+              <span class="cursor-pointer float-right" @click="removeAt(index, 1)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <line x1="4" y1="7" x2="20" y2="7" />
+                  <line x1="10" y1="11" x2="10" y2="17" />
+                  <line x1="14" y1="11" x2="14" y2="17" />
+                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+              </span>
+            </div>
+          </transition-group>
         </draggable>
       </div>
       <div class="bg-blue-100 p-2">
@@ -37,24 +40,27 @@ var BoardContainer = {
             + Add
           </span>
         </div>
-        <draggable class="flex flex-col space-y-2 px-2" :list="list2" group="people" @change="setItems">
-          <div
-            class="bg-white shadow-lg p-2 cursor-move"
-            v-for="(element, index) in list2"
-            :key="element.id"
-          >
-            <span>{{ element.text }}</span>
-            <span class="cursor-pointer float-right" @click="removeAt(index, 2)">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <line x1="4" y1="7" x2="20" y2="7" />
-                <line x1="10" y1="11" x2="10" y2="17" />
-                <line x1="14" y1="11" x2="14" y2="17" />
-                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-              </svg>
-            </span>
-          </div>
+        <draggable class="flex flex-col px-2 list-group" :list="list2" group="tasks" animation="200"
+          @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
+          <transition-group :name="playTransition">
+            <div
+              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              v-for="(element, index) in list2"
+              :key="element.id"
+            >
+              <span>{{ element.text }}</span>
+              <span class="cursor-pointer float-right" @click="removeAt(index, 2)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <line x1="4" y1="7" x2="20" y2="7" />
+                  <line x1="10" y1="11" x2="10" y2="17" />
+                  <line x1="14" y1="11" x2="14" y2="17" />
+                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+              </span>
+            </div>
+          </transition-group>
         </draggable>
       </div>
       <div class="bg-blue-100 p-2">
@@ -65,24 +71,27 @@ var BoardContainer = {
             + Add
           </span>
         </div>
-        <draggable class="flex flex-col space-y-2 px-2" :list="list3" group="people" @change="setItems">
-          <div
-            class="bg-white shadow-lg p-2 cursor-move"
-            v-for="(element, index) in list3"
-            :key="element.id"
-          >
-            <span>{{ element.text }}</span>
-            <span class="cursor-pointer float-right" @click="removeAt(index, 3)">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <line x1="4" y1="7" x2="20" y2="7" />
-                <line x1="10" y1="11" x2="10" y2="17" />
-                <line x1="14" y1="11" x2="14" y2="17" />
-                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-              </svg>
-            </span>
-          </div>
+        <draggable class="flex flex-col px-2 list-group" :list="list3" group="tasks" animation="200"
+          @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
+          <transition-group :name="playTransition">
+            <div
+              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              v-for="(element, index) in list3"
+              :key="element.id"
+            >
+              <span>{{ element.text }}</span>
+              <span class="cursor-pointer float-right" @click="removeAt(index, 3)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <line x1="4" y1="7" x2="20" y2="7" />
+                  <line x1="10" y1="11" x2="10" y2="17" />
+                  <line x1="14" y1="11" x2="14" y2="17" />
+                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+              </span>
+            </div>
+          </transition-group>
         </draggable>
       </div>
       <div class="bg-blue-100 p-2">
@@ -93,24 +102,27 @@ var BoardContainer = {
             + Add
           </span>
         </div>
-        <draggable class="flex flex-col space-y-2 px-2" :list="list4" group="people" @change="setItems">
-          <div
-            class="bg-white shadow-lg p-2 cursor-move"
-            v-for="(element, index) in list4"
-            :key="element.id"
-          >
-            <span>{{ element.text }}</span>
-            <span class="cursor-pointer float-right" @click="removeAt(index, 4)">
-              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <line x1="4" y1="7" x2="20" y2="7" />
-                <line x1="10" y1="11" x2="10" y2="17" />
-                <line x1="14" y1="11" x2="14" y2="17" />
-                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-              </svg>
-            </span>
-          </div>
+        <draggable class="flex flex-col px-2 list-group" :list="list4" group="tasks" animation="200"
+          @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
+          <transition-group :name="playTransition">
+            <div
+              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              v-for="(element, index) in list4"
+              :key="element.id"
+            >
+              <span>{{ element.text }}</span>
+              <span class="cursor-pointer float-right" @click="removeAt(index, 4)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <line x1="4" y1="7" x2="20" y2="7" />
+                  <line x1="10" y1="11" x2="10" y2="17" />
+                  <line x1="14" y1="11" x2="14" y2="17" />
+                  <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                  <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                </svg>
+              </span>
+            </div>
+          </transition-group>
         </draggable>
       </div>
       <dialog :open="openDialog" class="w-2/3 mt-10 border-2 border-gray-500 shadow-2xl rounded-lg">
@@ -152,6 +164,7 @@ var BoardContainer = {
   data() {
     return {
       openDialog: false,
+      drag: false,
       listSelected: 'todo',
       text: null,
       id: null,
@@ -163,6 +176,11 @@ var BoardContainer = {
   },
   created() {
     this.retrieveLists();
+  },
+  computed: {
+    playTransition() {
+      return this.drag ? 'flip-list': null;
+    }
   },
   methods: {
     retrieveLists() {

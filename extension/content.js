@@ -6,6 +6,7 @@ chrome.runtime.onMessage.addListener(request => {
 });
 
 const modal = document.createElement("dialog");
+modal.setAttribute("id", "minikan-dialog")
 modal.setAttribute(
   "style",`
   height: 500px;
@@ -23,7 +24,7 @@ modal.setAttribute(
 modal.innerHTML = `
   <div style="display: flex; flex-direction: column; margin: 0; padding: 0;">
     <div style="display: flex; justify-content: flex-end; height: 25px;">
-      <div id="closeBtn"
+      <div id="close-btn"
         style="border: none; backgroud-color: white; cursor: pointer; margin: 0px 5px;">
         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -32,19 +33,19 @@ modal.innerHTML = `
         </svg>
       </div>
     </div>
-    <iframe id="vue-content"; style="height: 460px"></iframe>
+    <iframe id="minikan-vue-content"; style="height: 460px"></iframe>
   <div>
   `;
 
 document.body.appendChild(modal);
 
-const iframe = document.getElementById("vue-content");
+const iframe = document.getElementById("minikan-vue-content");
 iframe.src = chrome.extension.getURL("dist/index.html");
 iframe.frameBorder = 0;
 
-const dialog = document.querySelector("dialog");
+const dialog = document.querySelector("#minikan-dialog");
 if (dialog) {
-  dialog.querySelector("#closeBtn").addEventListener("click", () => {
+  dialog.querySelector("#close-btn").addEventListener("click", () => {
     iframe.src = null;
     dialog.close();
   });
