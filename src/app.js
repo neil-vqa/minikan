@@ -13,13 +13,14 @@ var BoardContainer = {
           @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
           <transition-group :name="playTransition">
             <div
-              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
               v-for="(element, index) in list1"
               :key="element.id"
             >
               <span>{{ element.text }}</span>
-              <span class="cursor-pointer float-right" @click="removeAt(index, 1)">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <span class="flex justify-end">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 1)"
+                  class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <line x1="4" y1="7" x2="20" y2="7" />
                   <line x1="10" y1="11" x2="10" y2="17" />
@@ -44,13 +45,14 @@ var BoardContainer = {
           @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
           <transition-group :name="playTransition">
             <div
-              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
               v-for="(element, index) in list2"
               :key="element.id"
             >
               <span>{{ element.text }}</span>
-              <span class="cursor-pointer float-right" @click="removeAt(index, 2)">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <span class="flex justify-end">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 2)"
+                  class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <line x1="4" y1="7" x2="20" y2="7" />
                   <line x1="10" y1="11" x2="10" y2="17" />
@@ -75,13 +77,14 @@ var BoardContainer = {
           @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
           <transition-group :name="playTransition">
             <div
-              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
               v-for="(element, index) in list3"
               :key="element.id"
             >
               <span>{{ element.text }}</span>
-              <span class="cursor-pointer float-right" @click="removeAt(index, 3)">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <span class="flex justify-end">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 3)"
+                  class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <line x1="4" y1="7" x2="20" y2="7" />
                   <line x1="10" y1="11" x2="10" y2="17" />
@@ -106,13 +109,14 @@ var BoardContainer = {
           @change="setItems" @start="drag = true" @end="drag = false" empty-insert-threshold="20">
           <transition-group :name="playTransition">
             <div
-              class="bg-white shadow-lg p-2 my-2 cursor-move"
+              class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
               v-for="(element, index) in list4"
               :key="element.id"
             >
               <span>{{ element.text }}</span>
-              <span class="cursor-pointer float-right" @click="removeAt(index, 4)">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <span class="flex justify-end">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 4)"
+                  class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <line x1="4" y1="7" x2="20" y2="7" />
                   <line x1="10" y1="11" x2="10" y2="17" />
