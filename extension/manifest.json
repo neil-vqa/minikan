@@ -18,6 +18,9 @@
       "js": ["content.js"]
     }
   ],
+  "action": {
+    "default_popup": "ui/popup.html"
+  },
   "commands": {
     "open-minikan": {
       "suggested_key": {
