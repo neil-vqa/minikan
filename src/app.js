@@ -14,13 +14,20 @@ var Board = {
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
             class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            :class="{
+              'border-l-4 border-red-300': element.taskColor == 'red',
+              'border-l-4 border-yellow-300': element.taskColor == 'yellow',
+              'border-l-4 border-green-300': element.taskColor == 'green',
+              'border-l-4 border-blue-300': element.taskColor == 'blue',
+            }"
             v-for="(element, index) in list1"
             :key="element.id"
           >
             <span>{{ element.text }}</span>
             <span class="flex justify-end">
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 1)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white"
+                 width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
                 <line x1="10" y1="11" x2="10" y2="17" />
@@ -45,13 +52,20 @@ var Board = {
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
             class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            :class="{
+              'border-l-4 border-red-300': element.taskColor == 'red',
+              'border-l-4 border-yellow-300': element.taskColor == 'yellow',
+              'border-l-4 border-green-300': element.taskColor == 'green',
+              'border-l-4 border-blue-300': element.taskColor == 'blue',
+            }"
             v-for="(element, index) in list2"
             :key="element.id"
           >
             <span>{{ element.text }}</span>
             <span class="flex justify-end">
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 2)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white" 
+                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
                 <line x1="10" y1="11" x2="10" y2="17" />
@@ -76,13 +90,20 @@ var Board = {
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
             class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            :class="{
+              'border-l-4 border-red-300': element.taskColor == 'red',
+              'border-l-4 border-yellow-300': element.taskColor == 'yellow',
+              'border-l-4 border-green-300': element.taskColor == 'green',
+              'border-l-4 border-blue-300': element.taskColor == 'blue',
+            }"
             v-for="(element, index) in list3"
             :key="element.id"
           >
             <span>{{ element.text }}</span>
             <span class="flex justify-end">
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 3)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white"
+                 width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
                 <line x1="10" y1="11" x2="10" y2="17" />
@@ -107,13 +128,20 @@ var Board = {
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
             class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            :class="{
+              'border-l-4 border-red-300': element.taskColor == 'red',
+              'border-l-4 border-yellow-300': element.taskColor == 'yellow',
+              'border-l-4 border-green-300': element.taskColor == 'green',
+              'border-l-4 border-blue-300': element.taskColor == 'blue',
+            }"
             v-for="(element, index) in list4"
             :key="element.id"
           >
             <span>{{ element.text }}</span>
             <span class="flex justify-end">
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 4)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer" width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white" 
+                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
                 <line x1="10" y1="11" x2="10" y2="17" />
@@ -130,7 +158,7 @@ var Board = {
         <div class="flex justify-end mb-2">
           <span @click="openDialog = false" 
             class="cursor-pointer">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x" width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <rect x="4" y="4" width="16" height="16" rx="2" />
               <path d="M10 10l4 4m0 -4l-4 4" />
@@ -140,24 +168,37 @@ var Board = {
         <form @submit.prevent="add" class="space-y-4">
           <div class="flex flex-col">
             <label class="text-xs mb-2">Note/Task</label>
-            <textarea v-model="text" class="bg-gray-100 px-3 py-1" rows="4" required></textarea>
+            <textarea v-model="text" class="bg-gray-100 px-3 py-1 rounded-lg" rows="4" required></textarea>
           </div>
-          <div class="flex flex-col">
-            <label class="text-xs mb-2">List</label>
-            <select v-model="listSelected" class="bg-gray-100 px-3 py-1" required>
-              <option disabled value="">Please select one</option>
-              <option value="todo">Todo</option>
-              <option value="onhold">On hold</option>
-              <option value="inprogress">In progress</option>
-              <option value="done">Done</option>
-            </select>
-          </div>
-          <div class="flex justify-end">
-            <button type="submit"
-              class="bg-blue-300 px-3 py-2 uppercase text-xs text-white rounded hover:bg-blue-400">
-              add
-            </button>
-          </div>
+          <div class="grid grid-cols-5 gap-5 w-full">
+            <div class="col-span-2 flex flex-col w-full">
+              <label class="text-xs mb-2">List</label>
+              <select v-model="listSelected" class="bg-gray-100 px-3 py-1 rounded-lg" required>
+                <option disabled value="">Please select one</option>
+                <option value="todo">Todo</option>
+                <option value="onhold">On hold</option>
+                <option value="inprogress">In progress</option>
+                <option value="done">Done</option>
+              </select>
+            </div>
+            <div class="col-span-2 flex flex-col w-full">
+              <label class="text-xs mb-2">Color</label>
+              <select v-model="taskColor" class="bg-gray-100 px-3 py-1 rounded-lg">
+                <option disabled value="">Please select one</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="null">None</option>
+              </select>
+            </div>
+            <div class="col-span-1 w-full flex items-center justify-center">
+              <button type="submit"
+                class="bg-blue-300 px-3 py-3 w-full uppercase text-xs text-white rounded-lg hover:bg-blue-400">
+                add
+              </button>
+            </div>
+          <div>
         </form>
       </dialog>
 
@@ -170,6 +211,7 @@ var Board = {
       listSelected: 'todo',
       text: null,
       id: null,
+      taskColor: null,
       list1: [],
       list2: [],
       list3: [],
@@ -205,16 +247,17 @@ var Board = {
       this.openDialog = true;
       this.listSelected = listType;
       this.id = uuidv1();
+      this.taskColor = null;
     },
     add() {
       if(this.listSelected == 'todo') {
-        this.list1.unshift({ text: this.text, id: this.id });
+        this.list1.unshift({ text: this.text, id: this.id, taskColor: this.taskColor });
       } else if (this.listSelected == 'onhold') {
-        this.list2.unshift({ text: this.text, id: this.id });
+        this.list2.unshift({ text: this.text, id: this.id, taskColor: this.taskColor });
       } else if (this.listSelected == 'inprogress') {
-        this.list3.unshift({ text: this.text, id: this.id });
+        this.list3.unshift({ text: this.text, id: this.id, taskColor: this.taskColor });
       } else if (this.listSelected == 'done') {
-        this.list4.unshift({ text: this.text, id: this.id });
+        this.list4.unshift({ text: this.text, id: this.id, taskColor: this.taskColor });
       }
       this.text = '';
       this.openDialog = false;

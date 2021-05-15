@@ -4,8 +4,10 @@
   "description": "Minimal Kanban-like task manager.",
   "main": "app.js",
   "scripts": {
+    "set:env-linux": "NODE_ENV=production",
+    "set:env-windows": "set NODE_ENV=production",
     "build:css-dev": "npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./src/tailwind.css",
-    "buid:css-prod": "NODE_ENV=production npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./extension/dist/tailwind.css",
+    "buid:css-prod": "npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./extension/dist/tailwind.css",
     "build:prod": "npm run buid:css-prod && copyfiles -f src/*.html src/*.js extension/dist"
   },
   "repository": {
