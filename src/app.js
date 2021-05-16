@@ -247,7 +247,6 @@ var Board = {
       this.openDialog = true;
       this.listSelected = listType;
       this.id = uuidv1();
-      this.taskColor = null;
     },
     add() {
       if(this.listSelected == 'todo') {
@@ -261,6 +260,7 @@ var Board = {
       }
       this.text = '';
       this.openDialog = false;
+      this.taskColor = null;
       this.setItems();
     },
     removeAt(idx, listID) {
