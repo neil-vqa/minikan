@@ -192,7 +192,7 @@ var Board = {
                 <option value="null">None</option>
               </select>
             </div>
-            <div class="col-span-1 w-full flex items-center justify-center">
+            <div class="col-span-1 w-full flex items-center justify-center pr-2">
               <button type="submit"
                 class="bg-blue-300 px-3 py-3 w-full uppercase text-xs text-white rounded-lg hover:bg-blue-400">
                 add
