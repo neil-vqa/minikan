@@ -13,7 +13,7 @@ var Board = {
         <draggable class="flex flex-col px-2 h-full" :list="list1" group="tasks" animation="200"
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
-            class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            class="card bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
             :class="{
               'border-l-4 border-red-300': element.taskColor == 'red',
               'border-l-4 border-yellow-300': element.taskColor == 'yellow',
@@ -25,19 +25,19 @@ var Board = {
           >
             <span>{{ element.text }}</span>
 
-            <span class="flex justify-between">
+            <span class="controls flex justify-between mt-2 text-gray-600 opacity-0 transition duration-300">
               <div class="flex" title="Copy">
                 <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
-                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full hover:bg-blue-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <rect x="8" y="8" width="12" height="12" rx="2" />
                   <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
                 </svg>
-                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+                <span class="text-xs ml-2" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 1)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white"
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full hover:bg-red-300 hover:text-white"
                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
@@ -62,7 +62,7 @@ var Board = {
         <draggable class="flex flex-col px-2 h-full" :list="list2" group="tasks" animation="200"
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
-            class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            class="card bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
             :class="{
               'border-l-4 border-red-300': element.taskColor == 'red',
               'border-l-4 border-yellow-300': element.taskColor == 'yellow',
@@ -74,19 +74,19 @@ var Board = {
           >
             <span>{{ element.text }}</span>
 
-            <span class="flex justify-between">
+            <span class="controls flex justify-between mt-2 text-gray-600 opacity-0 transition duration-300">
               <div class="flex" title="Copy">
                 <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
-                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full hover:bg-blue-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <rect x="8" y="8" width="12" height="12" rx="2" />
                   <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
                 </svg>
-                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+                <span class="text-xs ml-2" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 2)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white" 
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full hover:bg-red-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
@@ -111,7 +111,7 @@ var Board = {
         <draggable class="flex flex-col px-2 h-full" :list="list3" group="tasks" animation="200"
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
-            class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            class="card bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
             :class="{
               'border-l-4 border-red-300': element.taskColor == 'red',
               'border-l-4 border-yellow-300': element.taskColor == 'yellow',
@@ -123,19 +123,19 @@ var Board = {
           >
             <span>{{ element.text }}</span>
 
-            <span class="flex justify-between">
+            <span class="controls flex justify-between mt-2 text-gray-600 opacity-0 transition duration-300">
               <div class="flex" title="Copy">
                 <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
-                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full hover:bg-blue-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <rect x="8" y="8" width="12" height="12" rx="2" />
                   <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
                 </svg>
-                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+                <span class="text-xs ml-2" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 3)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white"
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full hover:bg-red-300 hover:text-white"
                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
@@ -160,7 +160,7 @@ var Board = {
         <draggable class="flex flex-col px-2 h-full" :list="list4" group="tasks" animation="200"
           @change="setItems" empty-insert-threshold="20" direction="vertical">
           <div
-            class="bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
+            class="card bg-white shadow-lg p-2 my-2 flex flex-col cursor-move"
             :class="{
               'border-l-4 border-red-300': element.taskColor == 'red',
               'border-l-4 border-yellow-300': element.taskColor == 'yellow',
@@ -172,19 +172,19 @@ var Board = {
           >
             <span>{{ element.text }}</span>
 
-            <span class="flex justify-between">
+            <span class="controls flex justify-between mt-2 text-gray-600 opacity-0 transition duration-300">
               <div class="flex" title="Copy">
                 <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
-                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full hover:bg-blue-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                   <rect x="8" y="8" width="12" height="12" rx="2" />
                   <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
                 </svg>
-                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+                <span class="text-xs ml-2" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
               </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 4)"
-                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white" 
+                class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full hover:bg-red-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <line x1="4" y1="7" x2="20" y2="7" />
