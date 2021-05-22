@@ -24,7 +24,18 @@ var Board = {
             :key="element.id"
           >
             <span>{{ element.text }}</span>
-            <span class="flex justify-end">
+
+            <span class="flex justify-between">
+              <div class="flex" title="Copy">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <rect x="8" y="8" width="12" height="12" rx="2" />
+                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                </svg>
+                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 1)"
                 class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white"
                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -62,7 +73,18 @@ var Board = {
             :key="element.id"
           >
             <span>{{ element.text }}</span>
-            <span class="flex justify-end">
+
+            <span class="flex justify-between">
+              <div class="flex" title="Copy">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <rect x="8" y="8" width="12" height="12" rx="2" />
+                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                </svg>
+                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 2)"
                 class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -100,7 +122,18 @@ var Board = {
             :key="element.id"
           >
             <span>{{ element.text }}</span>
-            <span class="flex justify-end">
+
+            <span class="flex justify-between">
+              <div class="flex" title="Copy">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <rect x="8" y="8" width="12" height="12" rx="2" />
+                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                </svg>
+                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 3)"
                 class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white"
                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -138,7 +171,18 @@ var Board = {
             :key="element.id"
           >
             <span>{{ element.text }}</span>
-            <span class="flex justify-end">
+
+            <span class="flex justify-between">
+              <div class="flex" title="Copy">
+                <svg xmlns="http://www.w3.org/2000/svg" @click="doCopy(element.text, element.id)"
+                  class="icon icon-tabler icon-tabler-copy cursor-pointer rounded-full text-gray-400 hover:bg-blue-300 hover:text-white" 
+                  width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <rect x="8" y="8" width="12" height="12" rx="2" />
+                  <path d="M16 8v-2a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v8a2 2 0 0 0 2 2h2" />
+                </svg>
+                <span class="text-xs ml-2 text-gray-600" :id="'copy-' + element.id" style="visibility: hidden;">Copied!</span>
+              </div>
               <svg xmlns="http://www.w3.org/2000/svg" @click="removeAt(index, 4)"
                 class="icon icon-tabler icon-tabler-trash cursor-pointer rounded-full text-gray-400 hover:bg-red-300 hover:text-white" 
                   width="17" height="17" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -274,6 +318,16 @@ var Board = {
         this.list4.splice(idx, 1);
       }
       this.setItems();
+    },
+    doCopy(text, id) {
+      let copiedMsg = document.querySelector(`#copy-${id}`);
+      copiedMsg.style.visibility = "visible";
+      this.$copyText(text)
+        .then(() => {
+          setTimeout(() => {
+            copiedMsg.style.visibility = "hidden";
+          }, 1000)
+        });
     },
     setItems() {
       let store1 = JSON.stringify(this.list1);
