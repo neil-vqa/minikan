@@ -1,6 +1,6 @@
 # minikan
 
-A minimal Kanban-like task manager as a Chrome extension.
+A minimal Kanban-like task manager as a Chrome extension. Download: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
 
 ### Get started
 
