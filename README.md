@@ -1,6 +1,6 @@
 # minikan
 
-A minimal Kanban-like task manager as a Chrome extension. Download here: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
+A minimal Kanban-like task manager as a Chrome extension. Download it here: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
 
 ### Tip: For a better directory structure when building your own implementation, please clone the "organize" branch.
 
@@ -11,6 +11,8 @@ A minimal Kanban-like task manager as a Chrome extension. Download here: https:/
 ![shot2](https://lh3.googleusercontent.com/si1X34wC69ptgorOoZGhVGoWKEnqmvBr0Bdcr5UwOBjAklLCdxdGefBhBb8gl91Huo148UCty1TlGd2Vvxf12Ww-GQ=w640-h400-e365-rj-sc0x00ffffff)
 
 ## Get started
+
+As of version 1.4: vue-2.6.12, vuedraggable-2.24.3, vue-clipboard2-0.3.1, tailwindcss-2.1.2
 
 (1) Build CSS for development.
 
@@ -29,6 +31,7 @@ npm run build:prod
 ## Download
 
 If you just want to use the extension right away, you can download it in the Chrome webstore: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
+
 Please do report issues you may experience in the Support section. Also, if you have some spare time, please leave a review. :grin:
 
 ## License
