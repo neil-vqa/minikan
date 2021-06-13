@@ -5,8 +5,11 @@
   "main": "app.js",
   "scripts": {
     "build:css-dev": "npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./src/tailwind.css",
-    "buid:css-prod": "NODE_ENV=production npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./extension/dist/tailwind.css",
-    "build:prod": "npm run buid:css-prod && copyfiles -f src/*.html src/*.js extension/dist"
+    "build:css-prod": "NODE_ENV=production npx tailwindcss-cli@latest build ./src/css/tailwind.css -o ./extension/dist/tailwind.css",
+    "copy:html": "copyfiles -f src/*.html extension/dist",
+    "copy:js": "copyfiles -f src/js/* extension/dist/js",
+    "copy:all": "npm run copy:html && npm run copy:js",
+    "build:prod": "npm run build:css-prod && npm run copy:all"
   },
   "repository": {
     "type": "git",
