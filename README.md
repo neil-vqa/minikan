@@ -1,8 +1,8 @@
 # minikan
 
-A minimal Kanban-like task manager as a Chrome extension. Download: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
+A minimal Kanban-like task manager as a Chrome extension. Download here: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
 
-### Tip: For a better directory structure, please clone the "organize" branch.
+### Tip: For a better directory structure when building your own implementation, please clone the "organize" branch.
 
 ## Screenshots
 
@@ -25,6 +25,11 @@ npm run build:css-dev
 ```javascript
 npm run build:prod
 ```
+
+## Download
+
+If you just want to use the extension right away, you can download it in the Chrome webstore: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
+Please do report issues you may experience in the Support section. Also, if you have some spare time, please leave a review. :grin:
 
 ## License
 
