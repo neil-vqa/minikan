@@ -2,6 +2,8 @@
 
 A minimal Kanban-like task manager as a Chrome extension. Download: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
 
+#### Tip: For a better directory structure, please clone the "organize" branch.
+
 ### Screenshots
 
 ![shot1](https://lh3.googleusercontent.com/fPdq0O76jeuCixd4KExAYl5TB2mSscr1xTQgMNBAtOHA21C5FKCmyJnGK80IEuVoK2EV5SHYvvsUNjnBf-vC0UPYEw=w640-h400-e365-rj-sc0x00ffffff)
