@@ -1,4 +1,8 @@
-![minikan](minikan-banner.png)
+<p align="center">
+    <a href="https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb">
+        <img src="https://raw.githubusercontent.com/neil-vqa/minikan/main/minikan-banner.png">
+    </a>
+</p>
 
 A minimal Kanban-like task manager as a Chrome extension. Download it here: https://chrome.google.com/webstore/detail/minikan/dphkgaloabgpiaobcjhilcldiikljenb
 
